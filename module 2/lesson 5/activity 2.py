@@ -10,8 +10,8 @@ for i in range(start_day):
 
 #Print the actual dates
 for day in range(1, total_days + 1):
-    print(f"days:3",end="")
-    column = 1
+    print(f"{day:3}",end="")
+    column += 1
     if column == 7:
         print()
         column = 0
