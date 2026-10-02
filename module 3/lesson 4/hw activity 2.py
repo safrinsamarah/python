@@ -1,5 +1,3 @@
-score = 0
-
 def add_points(points):
     global score
     score += points
