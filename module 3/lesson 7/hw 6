@@ -1,0 +1,41 @@
+
+import utility_module as utils
+from utility_module import percentage
+
+while True:
+    print("\n--- Utility Menu ---")
+    print("1. Calculate Percentage")
+    print("2. Convert Celsius to Fahrenheit")
+    print("3. Check Grade")
+    print("4. Calculate Rectangle Area")
+    print("5. Exit")
+
+    choice = input("Choose an option: ")
+
+    if choice == "1":
+        part = float(input("Enter obtained marks: "))
+        total = float(input("Enter total marks: "))
+        if total > 0:
+            print("Percentage:", percentage(part, total), "%")
+        else:
+            print("Total must be greater than zero.")
+
+    elif choice == "2":
+        c = float(input("Enter Celsius: "))
+        print("Fahrenheit:", utils.celsius_to_fahrenheit(c))
+
+    elif choice == "3":
+        mark = float(input("Enter your marks: "))
+        print("Grade:", utils.check_grade(mark))
+
+    elif choice == "4":
+        length = float(input("Enter length: "))
+        width = float(input("Enter width: "))
+        print("Area:", utils.rectangle_area(length, width))
+
+    elif choice == "5":
+        print("Goodbye!")
+        break
+
+    else:
+        print("Invalid choice. Try again.")
