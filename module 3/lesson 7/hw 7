@@ -1,0 +1,32 @@
+
+import random
+
+name = input("Enter your name: ")
+
+locations = []
+for i in range(3):
+    place = input("Enter an adventure location: ")
+    locations.append(place)
+
+characters = ["Brave Knight", "Wizard", "Explorer", "Superhero"]
+challenges = ["Fight a dragon", "Find hidden treasure", "Escape a trap"]
+rewards = ["Golden Sword", "Magic Ring", "Treasure Chest"]
+
+while True:
+    location = random.choice(locations)
+    character = random.choice(characters)
+    challenge = random.choice(challenges)
+    reward = random.choice(rewards)
+
+    print("\n--- Your Adventure ---")
+    print("Player:", name)
+    print("Location:", location)
+    print("Character:", character)
+    print("Challenge:", challenge)
+    print("Reward:", reward)
+
+    again = input("\nGenerate another adventure? (yes/no): ").lower()
+
+    if again != "yes":
+        print("Thanks for playing,", name + "!")
+        break
