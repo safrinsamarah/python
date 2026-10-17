@@ -1,0 +1,15 @@
+print("LIBRARY SHELF ORGANIZER")
+print("------------------------")
+
+shelves = int(input("Enter number of shelves: "))
+sections = int(input("Enter sections per shelf: "))
+
+print("\nLibrary Shelf Layout:\n")
+
+location = 1
+
+for s in range(1, shelves + 1):
+    for sec in range(1, sections + 1):
+        print(f"Shelf {s} - Section {sec} (Location {location})", end="  ")
+        location += 1
+    print()
