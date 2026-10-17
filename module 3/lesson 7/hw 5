@@ -1,0 +1,26 @@
+
+import random
+
+secret = random.randint(1, 10)
+attempts = 3
+
+print("Welcome to the Number Guessing Game!")
+print("Guess a number between 1 and 10.")
+print("You have 3 attempts.")
+
+while attempts > 0:
+    guess = int(input("Enter your guess: "))
+
+    if guess < 1 or guess > 10:
+        print("Invalid number! Try again.")
+        continue
+
+    if guess == secret:
+        print("Congratulations! You guessed correctly!")
+        break
+    else:
+        attempts -= 1
+        print("Wrong guess! Attempts left:", attempts)
+
+if attempts == 0 and guess != secret:
+    print("Game over! The number was", secret)
