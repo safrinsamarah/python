@@ -1,0 +1,15 @@
+def average_of_three(num1, num2, num3):
+    average = (num1 + num2 + num3) / 3
+    return average
+
+trial1 = 12.5
+trial2 = 14.0
+trial3 = 13.5
+
+final_result = average_of_three(trial1, trial2, trial3)
+
+print("Science Fair Experiment Results")
+print("Trial 1:", trial1)
+print("Trial 2:", trial2)
+print("Trial 3:", trial3)
+print("Average Result:", round(final_result, 2), "cm")
